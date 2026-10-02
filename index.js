@@ -14,9 +14,11 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("public")); // frontend serve karega
 
+
 import authRoutes from "./Routes/auth.js";
 app.use("/api/auth", authRoutes);
 app.use("/", urlRoutes);
+
 
 const PORT = process.env.PORT || 5050;
 app.listen(PORT, () => {
